@@ -1,0 +1,33 @@
+
+class RealEstateInvestment:
+    def __init__(self, land_location, land_area, land_zone, land_value, land_value_increase, building_cost, building_period):
+        self.land_location = land_location
+        self.land_area = land_area
+        self.land_zone = land_zone
+        self.land_value = land_value
+        self.land_value_increase = land_value_increase
+        self.building_cost = building_cost
+        self.building_period = building_period
+
+    def calculate_investment_return(self):
+        # 在这里编写计算投资回报
+        # 可以根据输入的数据进行各种计算，比如土地利用率、投资回报率等
+
+        return investment_return
+
+# 接收用户输入数据
+land_location = input("请输入土地坐落：")
+land_area = float(input("请输入土地面積："))
+land_zone = input("请输入土地使用分區：")
+land_value = float(input("请输入土地公告現值："))
+land_value_increase = float(input("请输入土地公告現值增幅："))
+building_cost = float(input("请输入建築成本/坪："))
+building_period = float(input("请输入建物施工期間："))
+
+# 创建房地产投资对象
+investment_case = RealEstateInvestment(land_location, land_area, land_zone, land_value, land_value_increase, building_cost, building_period)
+
+# 计算投资回报
+investment_return = investment_case.calculate_investment_return()
+
+print("投资回报为：", investment_return)
